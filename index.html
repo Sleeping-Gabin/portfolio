@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오</title>
+
+  <!-- font -->
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+
+  <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- style sheet -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- js -->
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <!-- intro -->
+  <div class="intro-section-outer section-outer" id="intro">
+    <section class="intro-section">
+      <p class="title">
+        신입 프론트엔드 개발자<br><span class="big">성가빈</span>의 <span class="big">포트폴리오</span>입니다.
+      </p>
+      <div class="sticker star"></div>
+      <div class="sticker heart"></div>
+      <div class="sticker candy"></div>
+    </section>
+    <div class="sticker arrow fix"></div>
+  </div><!--intro-->
+
+  <!-- profile -->
+  <div class="profile-section-outer section-outer" id="profile">
+    <section class="profile-section">
+      <div class="profile">
+        <div class="profile-img">
+          <img src="./image/profile.jpg" alt="프로필 사진">
+          <div class="sticker flower"></div>
+        </div>
+        <div class="profile-intro">
+          <p>사용자 경험을 중시하는 개발자가 되겠습니다!</p>
+          <div class="sticker quotes-l fix"></div>
+          <div class="sticker quotes-r fix"></div>
+        </div>
+        <div class="profile-txt">
+          <p>성가빈</p>
+          <p>2002.04.08</p>
+          <p>부산 동래구 거주</p>
+        </div>
+      </div><!--profile-->
+
+      <div class="info">
+        <div class="info-box education">
+          <p class="info-title">학력/교육</p>
+          <div class="info-txt">
+            <p>그린 컴퓨터 아카데미</p>
+            <p>[스마트웹&콘텐츠개발] UI/UX & 프론트엔드 개발자 양성 과정</p>
+            <p>2025.03 ~ 2025.09</p>
+          </div>          
+          <div class="info-txt">
+            <p>부산대학교</p>
+            <p>정보컴퓨터공학부</p>
+            <p>2021.03 ~ 2025.02</p>
+          </div>
+        </div><!--info box-->
+        <div class="info-box certificate">
+          <p class="info-title">자격증</p>
+          <div class="info-txt">
+            <p>정보처리기사</p>
+            <p>2025.06.13</p>
+            <p>국가산업인력공단</p>
+          </div>
+          <div class="info-txt">
+            <p>JLPT N2</p>
+            <p>2022.08.10</p>
+            <p>일본국제교육지원협회</p>
+          </div>
+          <div class="sticker cat"></div>
+        </div><!--info box-->
+        <div class="info-box">
+          <div class="small-info-box hobby">
+            <p class="info-title">취미</p>
+            <p>추리소설 읽기</p>
+            <p>게임</p>
+          </div>
+          <div class="small-info-box ability">
+            <p class="info-title">특기</p>
+            <p>문맥 속에서 단어 뜻 추론하기</p>
+          </div>
+          <div class="small-info-box like">
+            <p class="info-title">좋아하는 것</p>
+            <p>고양이</p>
+            <p>초록색</p>
+            <p>바다</p>
+            <p>방에서 뒹굴거리기</p>
+          </div>
+          <div class="sticker twinkle"></div>
+        </div><!--info box-->
+      </div><!--info-->
+    </section>
+  </div><!--profile-->
+
+  <!-- skill -->
+  <div class="skill-section-outer section-outer" id="skill">
+    <p class="section-title">스킬</p>
+    <section class="skill-section">
+      <div class="skill-container">
+        <div class="skills">
+          <div class="skill-title">
+            <div class="sticker triangle fix"></div>
+            <p>잘 할 수 있는 것</p>
+          </div>
+          <ul>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+              </div>
+              <p class="skill-name">HTML5</p>
+              <p class="skill-txt">
+                시맨틱 태그를 이용한 웹 구조 작성
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+              </div>
+              <p class="skill-name">CSS3</p>
+              <p class="skill-txt">
+                media query로 반응형 레이아웃 구현<br>스타일 및 애니메이션 추가
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+              </div>
+              <p class="skill-name">CSS3</p>
+              <p class="skill-txt">
+                ES6 문법 사용<br>DOM 조작, 이벤트 처리, 비동기 처리 및 데이터 바인딩
+              </p>
+            </li>
+          </ul>
+        </div><!--skills-->
+
+        <div class="skills">
+          <div class="skill-title">
+            <div class="sticker triangle fix"></div>
+            <p>할 수 있는 것</p>
+          </div>
+          <ul>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />          
+              </div>
+              <p class="skill-name">React</p>
+              <p class="skill-txt">
+                컴포넌트 기반 UI 설계<br>react-router를 통한 SPA 구현
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" />                    
+              </div>
+              <p class="skill-name">Redux toolkit</p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" />     
+              </div>
+              <p class="skill-name">JQuery</p>
+              <p class="skill-txt">
+                DOM 조작, 이벤트 처리
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />    
+              </div>
+              <p class="skill-name">SCSS</p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/styledcomponents/styledcomponents-original.svg" />    
+              </div>
+              <p class="skill-name">styled components</p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+              </div>
+              <p class="skill-name">Figma</p>
+              <p class="skill-txt">
+                UI 시안 및 와이어프레임 제작
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" />
+              </div>
+              <p class="skill-name">Kotlin</p>
+              <p class="skill-txt">
+                ViewModel, Coroutine, Room을 활용한 앱 개발 경험
+              </p>
+            </li>
+          </ul>
+        </div><!--skills-->
+
+        <div class="skills">
+          <div class="skill-title">
+            <div class="sticker triangle fix"></div>
+            <p>사용한 적 있는 것</p>
+          </div>
+          <ul>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="./image/gsap-black.png" />
+              </div>
+              <p class="skill-name">GSAP</p>
+              <p class="skill-txt">
+                간단한 애니메이션
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactbootstrap/reactbootstrap-original.svg" />
+              </div>
+              <p class="skill-name">React Bootstrap</p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+              </div>
+              <p class="skill-name">Git</p>
+              <p class="skill-txt">
+                커밋, 브랜치, 병합 등 기본적인 버전 관리 가능
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
+              </div>
+              <p class="skill-name">Photoshop</p>
+              <p class="skill-txt">
+                간단한 이미지 편집
+              </p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+              </div>
+              <p class="skill-name">Python</p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+              </div>
+              <p class="skill-name">Java</p>
+            </li>
+            <li class="skill">
+              <div class="skill-img">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+              </div>
+              <p class="skill-name">MySQL</p>
+              <p class="skill-txt">
+                테이블 설계 및 데이터 CRUD 쿼리 작성
+              </p>
+            </li>
+          </ul>
+        </div><!--skills-->
+      </div>
+      
+      <div class="sticker monitor"></div>
+      <div class="sticker heart"></div>
+      <div class="sticker cloud"></div>
+    </section>
+  </div><!--skill-->
+
+  <!-- project -->
+  <div class="project-section-outer section-outer" id="project">
+    <p class="section-title">프로젝트</p>
+    <section class="project-section">
+      <div class="project-container">
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            곰곰가구 - 적응형 쇼핑몰 사이트
+          </p>
+          <img src="./image/thumbnail/gomgom.jpg" alt="곰곰가구 - 적응형 쇼핑몰 사이트">
+        </div>
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            마이리얼트립 - 반응형 웹 리뉴얼
+          </p>
+          <img src="./image/thumbnail/myrealtrip.jpg" alt="마이리얼트립 - 반응형 웹 리뉴얼">
+        </div>
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            네스프레소 - 리엑트 리뉴얼 사이트
+          </p>
+          <img src="./image/thumbnail/react.jpg" alt="네스프레소 - 리엑트 리뉴얼 사이트">
+        </div>
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            동원산업 프로모션 사이트
+          </p>
+          <img src="./image/thumbnail/promotion.jpg" alt="동원산업 프로모션 사이트">
+        </div>
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            피나치공 - 리엑트 키오스크
+          </p>
+          <img src="./image/thumbnail/kiosk.jpg" alt="피나치공 - 리엑트 키오스크">
+        </div>
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            공일 - 안드로이드 앱
+          </p>
+          <img src="./image/thumbnail/gongill.jpg" alt="공일 - 안드로이드 앱">
+        </div>
+        <div class="thumbnail">
+          <p class="thumbnail-on">
+            졸업과제 - 신약 개발 후보물질 발굴을 위한 거대 화합물 라이브러리 탐색 최적화
+          </p>
+          <img src="./image/thumbnail/screening.jpg" alt="졸업과제 - 신약 개발 후보물질 발굴을 위한 거대 화합물 라이브러리 탐색 최적화">
+        </div>
+        
+        <div class="sticker cat"></div>
+        <div class="sticker candy"></div>
+        <div class="sticker pill"></div>
+        <div class="sticker tree"></div>
+      </div>
+    </section>
+  </div><!--project-->
+
+  <!--project modal-->
+  <div class="project-modal hidden">
+    <div class="modal-frame">
+      <div class="close-btn"></div>
+      <div class="sticker ribbon"></div>
+      <div class="sticker flower"></div>
+      <div class="sticker twinkle"></div>
+    </div>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/gomgom.jpg" alt="곰곰가구">
+          </div>
+          <div class="project-info">
+            <p class="project-title">곰곰가구 - 적응형 쇼핑몰 사이트</p>
+            <p class="duration">2025.03.31 ~ 2025.05.21 <span>개발 05.07 ~ 05.21 / 기능 추가 07.02 ~ 07.15</span></p>
+            <p class="team">개인 프로젝트</p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>JQuery</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              가구 쇼핑몰 사이트 제작 프로젝트<br>
+              pc / mobile 두 버전의 적응형 웹으로 제작<br><br>
+              페이지<br>
+              - 메인 페이지<br>
+              - 서브 페이지<br>
+              - 상세 페이지<br><br>
+              기능<br>
+              - 상품 필터링 및 정렬<br>
+              - 로그인/회원가입 시스템<br>
+              - 후기/문의 작성 및 삭제
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/Sleeping-Gabin/gomgom" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/plan_gomgom.pdf" target="_blank">
+                기획서
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="./file/style_guide_gomgom.pdf" target="_blank">
+                스타일 가이드
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="./file/story_board_gomgom.pdf" target="_blank">
+                스토리 보드
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="#!" onclick='window.open("https:\/\/sleeping-gabin.github.io\/gomgom-mobile\/", "_blank", "width=350, height=700")'>
+                모바일 사이트
+                <div class="btn-icon link"></div>
+              </a>
+              <a href="http://sunggabin.dothome.co.kr/" target="_blank">
+                PC 사이트
+                <div class="btn-icon link"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/myrealtrip.jpg" alt="마이리얼트립 - 반응형 웹 리뉴얼">
+          </div>
+          <div class="project-info">
+            <p class="project-title">마이리얼트립 - 반응형 웹 리뉴얼</p>
+            <p class="duration">2025.06.09 ~ 2025.06.30 <span>개발 06.23 ~ 06.30</span></p>
+            <p class="team">팀 프로젝트(5명)</p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GSAP</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              여행예약 플랫폼 마이리얼트립 사이트를 반응형으로 리뉴얼 하는 프로젝트<br>
+              PC / 태블릿 / 모바일에 대응되는 반응형 웹 사이트<br><br>
+              페이지<br>
+              - 메인 페이지<br>
+              - 서브 페이지(여행지 소개)<br><br>
+              역할<br>
+              팀원과 함께 기획을 진행하고 이후 각자 개발<br>
+              - 공통 자료 조사 및 콘텐츠 개발을 위한 회의 참여<br>
+              - UI 부문 경쟁사 분석<br>
+              - 메인 페이지 일부, header, footer 시안 제작<br>
+              - 콘셉트 도출을 위한 브레인스토밍과 어피니티 다이어그램에 참여
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/Sleeping-Gabin/responsive-web" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/plan_myrealtrip.pdf" target="_blank">
+                기획서
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="https://sleeping-gabin.github.io/responsive-web/" target="_blank">
+                사이트 보기
+                <div class="btn-icon link"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/react.jpg" alt="네스프레소 - 리엑트 리뉴얼 사이트">
+          </div>
+          <div class="project-info">
+            <p class="project-title">네스프레소 - 리엑트 리뉴얼 사이트</p>
+            <p class="duration">2025.07.28 ~ 2025.08.08 <span>개발 08.01 ~ 08.08</span></p>
+            <p class="team">개인 프로젝트</p>
+            <ul>
+              <li>React</li>
+              <li>Redux toolkit</li>
+              <li>React router</li>
+              <li>styled-components</li>
+              <li>React Bootstrap</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              네스프레소 사이트의 일부를 리엑트를 사용하여 리뉴얼한 사이트<br>
+              커피 캡슐을 판매하고, 커피를 활용한 레시피와 커피 레터를 소개<br><br>
+              페이지<br>
+              - 메인 페이지<br>
+              - 커피 목록/레시피 목록<br>
+              - 커피 레터<br>
+              - 장바구니<br>
+              - 찜 목록<br><br>
+              기능<br>
+              - 커피/레시피 필터링<br>
+              - 커피/레시피 찜 목록에 추가/해제<br>
+              - 장바구니에 커피 추가/수량 변경/삭제
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/Sleeping-Gabin/react-project" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/plan_react.pdf" target="_blank">
+                기획서
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="https://sleeping-gabin.github.io/react-project/" target="_blank">
+                사이트 보기
+                <div class="btn-icon link"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/promotion.jpg" alt="동원산업 프로모션 사이트">
+          </div>
+          <div class="project-info">
+            <p class="project-title">동원산업 프로모션 사이트</p>
+            <p class="duration">2025.07.14 ~ 2025.07.29 <span>개발 07.22 ~ 07.29</span></p>
+            <p class="team">개인 프로젝트</p>
+            <ul>
+              <li>HTML</li>
+              <li>SCSS</li>
+              <li>JavaScript</li>
+              <li>GSAP</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              동원 산업의 메인 페이지를 프로모션 형식으로 제작<br>
+              마우스 호버 효과 및 GSAP 애니메이션으로 역동적인 페이지를 구성
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/Sleeping-Gabin/promotion" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/plan_promotion.pdf" target="_blank">
+                기획서
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="https://sleeping-gabin.github.io/promotion/" target="_blank">
+                사이트 보기
+                <div class="btn-icon link"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/kiosk.jpg" alt="피나치공 - 리엑트 키오스크">
+          </div>
+          <div class="project-info">
+            <p class="project-title">피나치공 - 리엑트 키오스크</p>
+            <p class="duration">2025.08.11 ~ 2025.08.22 <span>개발 08.18 ~ 08.22</span></p>
+            <p class="team">개인 프로젝트</p>
+            <ul>
+              <li>React</li>
+              <li>Scss</li>
+              <li>Redux toolkit</li>
+              <li>React router</li>
+              <li>styled-components</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              리엑트로 만든 피나치공 키오스크<br><br>
+              페이지<br>
+              - 메인 화면<br>
+              - 메뉴<br>
+              - 옵션 선택<br>
+              - 주문 확인<br>
+              - 결제 수단 선택<br>
+              - 결제 대기/완료<br><br>
+              기능<br>
+              - 상품 옵션 선택<br>
+              - 장바구니 추가/삭제/수량 변경<br>
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/Sleeping-Gabin/react-kiosk" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/plan_kiosk.pdf" target="_blank">
+                기획서
+                <div class="btn-icon file"></div>
+              </a>
+              <a href="https://sleeping-gabin.github.io/react-kiosk/" target="_blank">
+                사이트 보기
+                <div class="btn-icon link"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+        
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/gongill.jpg" alt="공일 - 안드로이드 앱">
+          </div>
+          <div class="project-info">
+            <p class="project-title">공일 - 안드로이드 앱</p>
+            <p class="duration">2023.03 ~ 2024.11</p>
+            <p class="team">개인 프로젝트</p>
+            <ul>
+              <li>Kotlin</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              '제5인격'이라는 게임의 e-sports 대회의 경기 결과를 기록하고, 응원하는 팀이 목표 순위에 들 수 있는 시나리오를 탐색하는 앱<br><br>
+              페이지<br>
+              - 스플래시 화면<br>
+              - 경기 일정<br>
+              - 순위<br>
+              - 그룹 목록<br>
+              - 경기 상세<br>
+              - 팀/그룹 상세<br>
+              - 시나리오 분석 결과<br><br>
+              기능<br>
+              - 경기 일정 필터링<br>
+              - 경기 점수 수정<br>
+              - 응원하는 팀이 목표 순위에 들 수 있는 시나리오 분석<br>
+              - 그룹/팀 추가, 수정, 삭제<br>
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/Sleeping-Gabin/GongIll" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/plan_gongill.pdf" target="_blank">
+                기획서
+                <div class="btn-icon file"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+
+        <div class="swiper-slide project">
+          <div class="project-img">
+            <img src="./image/project/screening.jpg" alt="졸업과제">
+          </div>
+          <div class="project-info">
+            <p class="project-title">졸업과제 - 신약 개발 후보물질 발굴을 위한 거대 화합물 라이브러리 탐색 최적화</p>
+            <p class="duration">2024.05 ~ 2024.10</p>
+            <p class="team">팀 프로젝트(3인)</p>
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <p class="txt-title">소개</p>
+            <p class="project-txt">
+              신약 개발 후보물질 발굴을 위한 거대 화합물 라이브러리 탐색 최적화를 주제로 프로젝트를 진행하고, 그 결과를 웹 애플리케이션의 형태로 시각화<br><br>
+              기능<br>
+              - 라이트 모드/다크 모드<br>
+              - 리간드 데이터베이스에 추가<br>
+              - 리셉터 파일을 업로드 및 탐색(Random, Clustering, MEMES)<br>
+              - 미리 업로드 된 리셉터를 이용한 데모
+              - 3Dmol.js를 이용한 도킹 포즈 시각화<br><br>
+              역할<br>
+              - rdkit을 이용한 clustering 구현<br>
+              - MO-MEMES 소스코드 수정 및 MEMES 알고리즘 테스트<br>
+              - 웹 애플리케이션 UI 디자인 및 구현<br>
+              - MEMES에 Acquisition Function 추가 구현<br><br>
+              * 보고서는 일부만 수록되었습니다.
+            </p>
+            <div class="btn-box">
+              <a href="https://github.com/pnucse-capstone-2024/Capstone-2024-team-08" target="_blank">
+                상세 보기
+                <div class="btn-icon github"></div>
+              </a>
+              <a href="./file/report_screening.pdf" target="_blank">
+                보고서(일부)
+                <div class="btn-icon file"></div>
+              </a>
+            </div>
+          </div>
+        </div><!--project-->
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div><!--project modal-->
+
+  <!-- contact -->
+  <div class="contact-section-outer section-outer" id="contact">
+    <section class="contact-section">
+      <div class="thanks">
+        <p>감사합니다</p>
+        <div class="sticker exclamation fix"></div>
+      </div>
+      <div class="contact">
+        <p class="name">성가빈</p>
+        <p><span>이메일</span>bini020408@naver.com</p>
+        <p><span>전화번호</span>010-8505-1325</p>
+        <p><span>깃허브</span><a href="https://github.com/Sleeping-Gabin">Sleeping-Gabin</a></p>
+
+        <div class="sticker ribbon"></div>
+        <div class="sticker star"></div>
+      </div>
+
+      <div class="sticker divide"></div>
+      <div class="sticker fish"></div>
+    </section>
+  </div>
+
+  <!-- navigation -->
+  <nav class="nav">
+    <a href="#intro" class="link">
+      <p>홈</p>
+      <div class="bullet"></div>
+    </a><!--link-->
+    <a href="#profile" class="link">
+      <p>프로필</p>
+      <div class="bullet"></div>
+    </a><!--link-->
+    <a href="#skill" class="link">
+      <p>스킬</p>
+      <div class="bullet"></div>
+    </a><!--link-->
+    <a href="#project" class="link">
+      <p>프로젝트</p>
+      <div class="bullet"></div>
+    </a><!--link-->
+    <a href="#contact" class="link">
+      <p>연락</p>
+      <div class="bullet"></div>
+    </a><!--link-->
+  </nav>
+</body>
+</html>
