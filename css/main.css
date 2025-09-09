@@ -5,10 +5,6 @@
   font-family: "NanumSquareRound", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 img {
   display: block;
   width: 100%;
@@ -91,12 +87,28 @@ ul, li {
   background-image: url(./img/sticker/triangle.png);
 }
 
+/* ----- section outer ----- */
+.section-outer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  padding: 60px 0;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.section-outer.center {
+  justify-content: center;
+  align-items: center;
+}
+
 /* ----- section title ----- */
 .section-title {
   font-size: 32px;
   line-height: 40px;
   width: calc((100% - 260px) / 12 * 4 + 60px + 0px);
   max-width: 400px;
+  margin-bottom: 60px;
   box-sizing: border-box;
   padding: 7px 20px;
   border-radius: 10px;
@@ -104,13 +116,11 @@ ul, li {
   font-family: "NanumSquareRoundB", sans-serif;
   text-align: center;
   opacity: 0;
+  align-self: center;
 }
 
 /* ---------- intro section ---------- */
 .intro-section-outer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   background-image: url(../image/pattern.jpg);
@@ -126,10 +136,9 @@ ul, li {
 .intro-section {
   width: 100%;
   max-width: 1280px;
-  max-height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 60px 20px 120px;
+  padding: 0 20px 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,22 +196,18 @@ ul, li {
 }
 /* ---------- profile ---------- */
 .profile-section-outer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
   background-color: #F9F6FF;
 }
 
 .profile-section {
   width: 100%;
   max-width: 1280px;
-  max-height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 60px 20px 120px;
+  padding: 0 20px 60px;
   display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
   justify-content: space-between;
 }
 .profile-section .profile {
@@ -346,11 +351,6 @@ ul, li {
 
 /* ---------- skill ---------- */
 .skill-section-outer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
   background-color: #fff4e0;
   position: relative;
   flex-direction: column;
@@ -359,10 +359,9 @@ ul, li {
 .skill-section {
   width: 100%;
   max-width: 1280px;
-  max-height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 60px 20px 120px;
+  padding: 0 20px 60px;
   position: relative;
 }
 .skill-section .skill-container {
@@ -456,7 +455,7 @@ ul, li {
 }
 .skill-section .heart {
   transform: rotateZ(8deg);
-  top: -20px;
+  top: -70px;
   right: 10px;
 }
 .skill-section .cloud {
@@ -471,11 +470,6 @@ ul, li {
 
 /* ---------- project ---------- */
 .project-section-outer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
   background-color: #dcf6ff;
   position: relative;
   flex-direction: column;
@@ -484,11 +478,9 @@ ul, li {
 .project-section {
   width: 100%;
   max-width: 1280px;
-  max-height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 60px 20px 120px;
-  overflow: hidden;
+  padding: 0 20px 60px;
 }
 .project-section .project-container {
   display: grid;
@@ -567,9 +559,6 @@ ul, li {
 
 /* ----- project modal ----- */
 .project-modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -585,10 +574,9 @@ ul, li {
 .project-modal .modal-frame {
   width: 100%;
   max-width: 1280px;
-  max-height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 60px 20px 120px;
+  padding: 0 20px 60px;
   height: 100%;
   position: relative;
 }
@@ -668,6 +656,7 @@ ul, li {
   box-sizing: border-box;
   padding: 30px 20px;
   flex-direction: column;
+  overflow: auto;
 }
 .project-modal .project .project-info .project-title {
   font-size: 32px;
@@ -706,6 +695,7 @@ ul, li {
 .project-modal .project .project-info .project-txt {
   font-size: 16px;
   line-height: 25px;
+  min-height: 75px;
   overflow: auto;
   flex-grow: 1;
   margin-bottom: 20px;
@@ -746,21 +736,15 @@ ul, li {
 
 /* ---------- contact ---------- */
 .contact-section-outer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
   background-color: #FFF5F5;
 }
 
 .contact-section {
   width: 100%;
   max-width: 1280px;
-  max-height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 60px 20px 120px;
+  padding: 0 20px 60px;
   display: flex;
   align-items: center;
   justify-content: center;

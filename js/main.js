@@ -181,6 +181,10 @@ document.fonts.ready.then(() => {
   //스크롤 시 애니메이션
   sections.forEach((section, idx) => {
     section.addEventListener("wheel", (e) => {
+      if (section.scrollHeight > section.clientHeight && (e.deltaY < 0 && section.scrollTop > 0) || (e.deltaY > 0 && section.scrollHeight - section.scrollTop - 1 > section.clientHeight)) {
+        return;
+      }
+
       e.preventDefault();
 
       let nextIdx = e.deltaY > 0 ? idx + 1 : idx - 1;
@@ -217,6 +221,9 @@ document.fonts.ready.then(() => {
 
   positionSkillTxt();
   window.addEventListener("resize", positionSkillTxt);
+
+  centeringSection();
+  window.addEventListener("resize", centeringSection);
 
   //swiper
   let windowWidth = window.innerWidth;
@@ -265,14 +272,22 @@ document.fonts.ready.then(() => {
 
   modal.addEventListener("wheel", (e) => {
     const project = swiper.slides[swiper.activeIndex];
+    const projectInfo = project.querySelector(".project-info");
+    const infos = project.querySelectorAll(".project-info > *");
+    const btns = project.querySelectorAll(".btn-box a");
     const projectTxt = project.querySelector(".project-txt");
     
-    let scrollable = e.target === projectTxt;
-    scrollable &&= projectTxt.scrollHeight > projectTxt.clientHeight;
-    scrollable &&= (e.deltaY < 0 && projectTxt.scrollTop > 0) || (e.deltaY > 0 && projectTxt.scrollHeight - projectTxt.scrollTop - 1 > projectTxt.clientHeight);
-    console.log(projectTxt.scrollTop, projectTxt.scrollHeight - projectTxt.scrollTop, projectTxt.clientHeight)
+    let txtScrollable = e.target === projectTxt;
+    txtScrollable &&= projectTxt.scrollHeight > projectTxt.clientHeight;
+    txtScrollable &&= (e.deltaY < 0 && projectTxt.scrollTop > 0) || (e.deltaY > 0 && projectTxt.scrollHeight - projectTxt.scrollTop - 1 > projectTxt.clientHeight);
 
-    if (!scrollable) {
+    let infoScrollable = projectInfo || [...infos].includes(e.target) || [...btns].includes(e.target);
+    infoScrollable &&= projectInfo.scrollHeight > projectInfo.clientHeight;
+    infoScrollable &&= (e.deltaY < 0 && projectInfo.scrollTop > 0) || (e.deltaY > 0 && projectInfo.scrollHeight - projectInfo.scrollTop - 1 > projectInfo.clientHeight);
+
+    console.log(!txtScrollable && !infoScrollable, txtScrollable, infoScrollable)
+
+    if (!txtScrollable && !infoScrollable) {
       e.preventDefault();
     }
   }, {passive: false});
@@ -343,6 +358,7 @@ document.fonts.ready.then(() => {
     links[toIdx].classList.add("active");
 
     timelines[fromIdx].revert();
+    sections[toIdx].scrollTo(0, 0);
     timelines[toIdx].restart();
     currentIdx = toIdx;
   }
@@ -370,6 +386,20 @@ document.fonts.ready.then(() => {
   
       txt.style.display = "";
       txt.style.visibility = "visible";
+    });
+  }
+
+  //콘텐츠 중앙 배치
+  function centeringSection() {
+    sections.forEach(section => {
+      const contents = section.querySelector("section");
+  
+      if (contents.clientHeight < window.innerHeight - 120) {
+        section.classList.add("center");
+      }
+      else {
+        section.classList.remove("center");
+      }
     });
   }
 })
