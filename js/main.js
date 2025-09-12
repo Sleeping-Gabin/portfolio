@@ -179,26 +179,27 @@ document.fonts.ready.then(() => {
   window.addEventListener("resize", setCurrentSection);
 
   //스크롤 시 애니메이션
-  sections.forEach((section, idx) => {
-    section.addEventListener("wheel", (e) => {
-      if (section.scrollHeight > section.clientHeight && (e.deltaY < 0 && section.scrollTop > 0) || (e.deltaY > 0 && section.scrollHeight - section.scrollTop - 1 > section.clientHeight)) {
-        return;
-      }
+  window.addEventListener("wheel", (e) => {
+    // if (section.scrollHeight > section.clientHeight && (e.deltaY < 0 && section.scrollTop > 0) || (e.deltaY > 0 && section.scrollHeight - section.scrollTop - 1 > section.clientHeight)) {
+    //   return;
+    // }
 
-      e.preventDefault();
+    if (e.deltaY === 0)
+      return true;
 
-      let nextIdx = e.deltaY > 0 ? idx + 1 : idx - 1;
-      if (nextIdx >= 0 && nextIdx < sections.length) {
-        gsap.to(window, {
-          duration: 0.5,
-          scrollTo: "#" + sections[nextIdx].id,
-          onComplete: () => {
-            moveSection(idx, nextIdx);
-          }
-        });
-      }
-    }, {passive: false});
-  });
+    // e.preventDefault();
+
+    let nextIdx = e.deltaY > 0 ? currentIdx + 1 : currentIdx - 1;
+    if (nextIdx >= 0 && nextIdx < sections.length) {
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: "#" + sections[nextIdx].id,
+        onComplete: () => {
+          moveSection(currentIdx, nextIdx);
+        }
+      });
+    }
+  }, {passive: false});
 
   //스티커 애니메이션
   const stickers = document.querySelectorAll(".sticker:not(.fix)");

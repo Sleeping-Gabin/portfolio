@@ -90,12 +90,12 @@ ul, li {
 /* ----- section outer ----- */
 .section-outer {
   width: 100%;
+  min-width: 1024px;
   height: 100vh;
   display: flex;
   box-sizing: border-box;
   padding: 60px 0;
-  overflow-x: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 .section-outer.center {
   justify-content: center;
@@ -122,6 +122,7 @@ ul, li {
 /* ---------- intro section ---------- */
 .intro-section-outer {
   width: 100%;
+  min-width: 1024px;
   height: 100vh;
   background-image: url(../image/pattern.jpg);
   background-size: 80px 40px;
@@ -136,6 +137,7 @@ ul, li {
 .intro-section {
   width: 100%;
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px 60px;
@@ -165,7 +167,7 @@ ul, li {
   transform: rotateZ(-6deg);
   margin-top: -30px;
   margin-right: -30px;
-  top: calc(50% - 160px);
+  top: calc(50% - 200px);
   right: calc(50% - 110px);
 }
 .intro-section .heart {
@@ -202,12 +204,11 @@ ul, li {
 .profile-section {
   width: 100%;
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px 60px;
   display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
   justify-content: space-between;
 }
 .profile-section .profile {
@@ -359,6 +360,7 @@ ul, li {
 .skill-section {
   width: 100%;
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px 60px;
@@ -478,6 +480,7 @@ ul, li {
 .project-section {
   width: 100%;
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px 60px;
@@ -560,6 +563,7 @@ ul, li {
 /* ----- project modal ----- */
 .project-modal {
   width: 100%;
+  min-width: 1024px;
   height: 100vh;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.4);
@@ -574,6 +578,7 @@ ul, li {
 .project-modal .modal-frame {
   width: 100%;
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px 60px;
@@ -742,6 +747,7 @@ ul, li {
 .contact-section {
   width: 100%;
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px 60px;
@@ -867,6 +873,11 @@ ul, li {
   display: none;
 }
 
+@media all and (max-width: 1024px) {
+  .intro-section-outer .arrow {
+    left: 512px;
+  }
+}
 @media all and (min-width: 1281px) {
   .project-modal .swiper {
     padding: 0 calc((100% - 1240px) / 2 + 85px);
