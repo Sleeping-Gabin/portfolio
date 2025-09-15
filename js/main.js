@@ -189,6 +189,9 @@ document.fonts.ready.then(() => {
 
     // e.preventDefault();
 
+    if (!document.querySelector(".project-modal").classList.contains("hidden"))
+      return true;
+
     let nextIdx = e.deltaY > 0 ? currentIdx + 1 : currentIdx - 1;
     if (nextIdx >= 0 && nextIdx < sections.length) {
       gsap.to(window, {
@@ -272,6 +275,9 @@ document.fonts.ready.then(() => {
   });
 
   modal.addEventListener("wheel", (e) => {
+    if (e.deltaY == 0)
+      return true;
+
     const project = swiper.slides[swiper.activeIndex];
     const projectInfo = project.querySelector(".project-info");
     const infos = project.querySelectorAll(".project-info > *");
