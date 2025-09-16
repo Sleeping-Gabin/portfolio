@@ -90,7 +90,7 @@ ul, li {
 /* ----- section outer ----- */
 .section-outer {
   width: 100%;
-  min-width: 1024px;
+  min-width: 1240px;
   height: 100vh;
   display: flex;
   box-sizing: border-box;
@@ -106,8 +106,7 @@ ul, li {
 .section-title {
   font-size: 32px;
   line-height: 40px;
-  width: calc((100% - 260px) / 12 * 4 + 60px + 0px);
-  max-width: 400px;
+  width: 400px;
   margin-bottom: 60px;
   box-sizing: border-box;
   padding: 7px 20px;
@@ -122,7 +121,7 @@ ul, li {
 /* ---------- intro section ---------- */
 .intro-section-outer {
   width: 100%;
-  min-width: 1024px;
+  min-width: 1240px;
   height: 100vh;
   background-image: url(../image/pattern.jpg);
   background-size: 80px 40px;
@@ -135,8 +134,7 @@ ul, li {
 }
 
 .intro-section {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -202,8 +200,7 @@ ul, li {
 }
 
 .profile-section {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -212,7 +209,7 @@ ul, li {
   justify-content: space-between;
 }
 .profile-section .profile {
-  width: calc((100% - 260px) / 12 * 4 + 60px + 0px);
+  width: 400px;
   height: 100%;
   opacity: 0;
 }
@@ -266,7 +263,7 @@ ul, li {
   margin-bottom: 5px;
 }
 .profile-section .info {
-  width: calc((100% - 260px) / 12 * 7 + 120px + 0px);
+  width: 715px;
   height: 100%;
 }
 .profile-section .info .info-box {
@@ -358,8 +355,7 @@ ul, li {
 }
 
 .skill-section {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -371,7 +367,7 @@ ul, li {
   justify-content: space-between;
 }
 .skill-section .skill-container .skills {
-  width: calc((100% - 260px) / 12 * 4 + 60px + 0px);
+  width: 400px;
 }
 .skill-section .skill-container .skills .skill-title {
   display: flex;
@@ -401,7 +397,7 @@ ul, li {
   gap: 20px;
 }
 .skill-section .skill-container .skills .skill {
-  width: calc((100% - 40px) / 3 * 1 + 0px + 0px);
+  width: 85px;
   position: relative;
   opacity: 0;
 }
@@ -478,8 +474,7 @@ ul, li {
 }
 
 .project-section {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -563,7 +558,7 @@ ul, li {
 /* ----- project modal ----- */
 .project-modal {
   width: 100%;
-  min-width: 1024px;
+  min-width: 1240px;
   height: 100vh;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.4);
@@ -576,8 +571,7 @@ ul, li {
   display: none;
 }
 .project-modal .modal-frame {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -610,9 +604,10 @@ ul, li {
 }
 .project-modal .swiper {
   width: 100%;
+  min-width: 1240px;
   height: calc(100% - 40px - 20px - 120px);
   box-sizing: border-box;
-  padding: 0 calc((100% - 260px) / 12 + 20px);
+  padding: 0 105px;
   position: absolute;
   top: 120px;
   left: 0;
@@ -620,7 +615,7 @@ ul, li {
 }
 .project-modal .swiper .swiper-button-next, .project-modal .swiper .swiper-button-prev {
   --swiper-navigation-top-offset: calc(50% - 65px);
-  --swiper-navigation-sides-offset: 20px;
+  --swiper-navigation-sides-offset: 105px;
 }
 .project-modal .swiper .swiper-pagination {
   display: flex;
@@ -745,8 +740,7 @@ ul, li {
 }
 
 .contact-section {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -776,7 +770,7 @@ ul, li {
   position: static;
 }
 .contact-section .contact {
-  width: calc((100% - 260px) / 12 * 6 + 100px + 40px);
+  width: 630px;
   box-sizing: border-box;
   padding: 30px 20px;
   border-radius: 20px;
@@ -873,11 +867,6 @@ ul, li {
   display: none;
 }
 
-@media all and (max-width: 1024px) {
-  .intro-section-outer .arrow {
-    left: 512px;
-  }
-}
 @media all and (min-width: 1281px) {
   .project-modal .swiper {
     padding: 0 calc((100% - 1240px) / 2 + 85px);

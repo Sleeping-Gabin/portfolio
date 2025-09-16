@@ -26,13 +26,12 @@ ul, li {
 
 @mixin full-page {
   width: 100%;
-  min-width: 1024px;
+  min-width: 1240px;
   height: 100vh;
 }
 
 @mixin content-size {
-  width: 100%;
-  max-width: 1280px;
+  width: 1240px;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -50,13 +49,8 @@ ul, li {
   line-height: map.get($line-height, $type);
 }
 
-@mixin column-width($parent-col, $col, $padding: 0px) {
-  @if $parent-col == 12 {
-    width: calc((100% - $gutter * ($parent-col + 1)) / $parent-col * $col + $gutter * ($col - 1) + $padding * 2);
-  }
-  @else {
-    width: calc((100% - $gutter * ($parent-col - 1)) / $parent-col * $col + $gutter * ($col - 1) + $padding * 2);
-  }
+@function column-width($col) {
+  @return $column * $col + $gutter * ($col - 1);
 }
 
 $font-size: (
@@ -71,6 +65,7 @@ $line-height: (
   base: 25px
 );
 
+$column: 85px;
 $gutter: 20px;
 $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pill quotes-l quotes-r ribbon star tree twinkle triangle;
 
@@ -111,8 +106,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
 /* ----- section title ----- */
 .section-title {
   @include text(title);
-  @include column-width(12, 4);
-  max-width: 85px * 4 + $gutter * 3;
+  width: column-width(4);
   margin-bottom: 60px;
   box-sizing: border-box;
   padding: 7px 20px;
@@ -215,7 +209,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
   justify-content: space-between;
   
   .profile {
-    @include column-width(12, 4);
+    width: column-width(4);
     height: 100%;
     opacity: 0;
 
@@ -279,7 +273,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
   }
 
   .info {
-    @include column-width(12, 7);
+    width: column-width(7);
     height: 100%;
 
     .info-box {
@@ -403,7 +397,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
     justify-content: space-between;
 
     .skills {
-      @include column-width(12, 4);
+      width: column-width(4);
 
       .skill-title {
         @include flex-center();
@@ -433,7 +427,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
       }
 
       .skill {
-        @include column-width(3, 1);
+        width: column-width(1);
         position: relative;
         opacity: 0;
 
@@ -639,9 +633,10 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
 
   .swiper {
     width: 100%;
+    min-width: 1240px;
     height: calc(100% - map.get($line-height, title) - 20px - 120px);
     box-sizing: border-box;
-    padding: 0 calc((100% - $gutter * 13) / 12 + 20px);
+    padding: 0 column-width(1) + $gutter;
     position: absolute;
     top: calc(map.get($line-height, title) + 20px + 60px);
     left: 0;
@@ -649,7 +644,8 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
     --swiper-theme-color: #B8ECFF;
 
     .swiper-button-next, .swiper-button-prev {
-      --swiper-navigation-top-offset: calc(50% - 65px);--swiper-navigation-sides-offset: 20px;
+      --swiper-navigation-top-offset: calc(50% - 65px);
+      --swiper-navigation-sides-offset: 105px;
     }
 
     .swiper-pagination {
@@ -810,7 +806,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
   }
 
   .contact {
-    @include column-width(12, 6, $gutter);
+    width: column-width(6) + $gutter;
     box-sizing: border-box;
     padding: 30px 20px;
     border-radius: 20px;
@@ -925,15 +921,9 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
   }
 }
 
-@media all and (max-width: 1024px) {
-  .intro-section-outer .arrow {
-    left: 512px;
-  }
-}
-
 @media all and (min-width: 1281px) {
   .project-modal .swiper {
-    padding: 0 calc((100% - 1240px) / 2 + 85px);
+    padding: 0 calc((100% - 1240px) / 2 + column-width(1));
 
     .swiper-button-next, .swiper-button-prev {
       --swiper-navigation-sides-offset: calc((100% - 1240px) / 2 + 20px);
