@@ -414,7 +414,6 @@ ul, li {
   line-height: 25px;
   width: 100%;
   text-align: center;
-  word-break: break-all;
 }
 .skill-section .skill-container .skills .skill .skill-txt {
   font-size: 16px;
@@ -536,6 +535,9 @@ ul, li {
 }
 .project-section .project-container .thumbnail:nth-of-type(7) {
   transform: rotateZ(-4deg) translateY(-6.5px);
+}
+.project-section .project-container .thumbnail:nth-of-type(8) {
+  transform: rotateZ(2deg) translateY(0px);
 }
 .project-section .project-container .cat {
   transform: rotateZ(13deg);

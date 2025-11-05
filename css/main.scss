@@ -444,7 +444,7 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
           @include text();
           width: 100%;
           text-align: center;
-          word-break: break-all;
+          // word-break: break-all;
         }
 
         .skill-txt {
@@ -552,9 +552,9 @@ $stickers: arrow candy cat cloud divide exclamation fish flower heart monitor pi
         opacity: 1;
       }
 
-      $degree: -3, 0, 2, -2.5, 0, 3, -4;
-      $y: -2, 0, -7, 5, 0, 0, -6.5;
-      @for $i from 1 through 7 {
+      $degree: -3, 0, 2, -2.5, 0, 3, -4, 2;
+      $y: -2, 0, -7, 5, 0, 0, -6.5, 0;
+      @for $i from 1 through 8 {
         &:nth-of-type(#{$i}) {
           transform: rotateZ(#{list.nth($degree, $i)}deg) translateY(#{list.nth($y, $i)}px);
         }
